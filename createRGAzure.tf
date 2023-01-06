@@ -23,8 +23,7 @@ provider "azurerm" {
   tenant_id       = var.tenant_id
 }
 
-resource "azurerm_network_security_group" "example" {
-  name                = "testSecurityGroup"
-  location            = "North Europe"
-  resource_group_name = "RG-Morpheus"
+resource "azurerm_resource_group" "example" {
+  name     = "example"
+  location = "North Europe"
 }
